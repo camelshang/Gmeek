@@ -9,7 +9,7 @@ import urllib
 import requests
 import argparse
 from github import Github
-from xpinyin import Pinyin
+import pypinyin
 from feedgen.feed import FeedGenerator
 from jinja2 import Environment, FileSystemLoader
 from transliterate import translit
@@ -385,7 +385,7 @@ class GMEEK():
             elif self.blogBase["urlMode"]=="ru_translit": 
                 fileName=str(translit(issue.title, language_code='ru', reversed=True)).replace(' ', '-')
             else:
-                fileName=Pinyin().get_pinyin(issue.title)
+                fileName=pypinyin.slug(issue.title)
         
         fileName=re.sub(r'[<>:/\\|?*\"]|[\0-\31]', '-', fileName)
         return fileName
