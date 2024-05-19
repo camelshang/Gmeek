@@ -1,6 +1,6 @@
 PyGithub
 requests
-xpinyin
+pypinyin
 feedgen
 Jinja2
 transliterate
