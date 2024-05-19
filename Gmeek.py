@@ -460,7 +460,10 @@ if os.environ.get('GITHUB_EVENT_NAME')!='schedule':
     readme=readme+"### :speech_balloon: %d \r\n" % commentNumSum
     readme=readme+"### :hibiscus: %d \r\n" % wordCount
     readme=readme+"### :alarm_clock: %s \r\n" % datetime.datetime.now(blog.TZ).strftime('%Y-%m-%d %H:%M:%S')
-    readme=readme+"### Powered by :heart: [Gmeek](https://github.com/Meekdai/Gmeek)\r\n"
+    readme=readme+"### Powered by :heart: [Gmeek](https://github.com/camelshang/Gmeek) (fork [Meekdai/Gmeek](https://github.com/Meekdai/Gmeek)) \r\n"
+    readme=readme+"##### changes \r\n"
+    readme=readme+"- add google site verification \r\n"
+    readme=readme+"- add search_script and footer_script for more function \r\n"
     readmeFile=open(workspace_path+"/README.md","w")
     readmeFile.write(readme)
     readmeFile.close()
